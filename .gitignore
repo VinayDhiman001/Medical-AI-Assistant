@@ -1,0 +1,10 @@
+# Model files
+outputs/
+*.pt
+*.bin
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+.env
