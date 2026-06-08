@@ -1,0 +1,24 @@
+
+# Model Configuration
+model:
+  name: "mistralai/Mistral-7B-v0.1"  # Model we'll fine-tune
+  max_length: 512                      # Max token length
+  load_in_4bit: true                   # Use 4-bit quantization
+
+# Training Configuration
+training:
+  epochs: 3                            # Number of training epochs
+  batch_size: 4                        # Samples per batch
+  learning_rate: 2e-4                  # How fast model learns
+  output_dir: "outputs/model"          # Where to save model
+
+# Data Configuration
+data:
+  dataset_name: "medalpaca/medical_meadow_medqa"  # HuggingFace dataset
+  train_split: 0.8                     # 80% training
+  test_split: 0.2                      # 20% testing
+
+# Logging
+logging:
+  log_dir: "logs/"
+  log_level: "INFO"
